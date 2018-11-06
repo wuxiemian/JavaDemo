@@ -7,9 +7,7 @@ import java.util.Random;
 
 public class Client extends Panel {
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private static final int GAME_WIDTH=800,GAME_HEIGHT=800;
 	List<Plane> ps = new ArrayList<Plane>();
@@ -18,11 +16,11 @@ public class Client extends Panel {
 	List<Props> pps=new ArrayList<Props>();
 	Image offScreenImage = null;
 	static Random rd=new Random();
-	private Font font=new Font("ËÎÌå",Font.PLAIN,30);
+	private Font font=new Font("å®‹ä½“",Font.PLAIN,30);
 	int step=0;
-	private int score=0;//·ÖÊı
-	private int damage=0;//Ëğº¦³Ì¶È
-	private boolean gameOver=false;//ÊÇ·ñÓÎÏ·½áÊø
+	private int score=0;//åˆ†æ•°
+	private int damage=0;//æŸå®³ç¨‹åº¦
+	private boolean gameOver=false;//æ˜¯å¦æ¸¸æˆç»“æŸ
 	private int n=0;
 	BOSS boss=new BOSS(350,50,this);
 	private int bossNum=0;
@@ -70,10 +68,10 @@ public class Client extends Panel {
 		if(boss.isLive()) boss.draw(g);
 		Color c=g.getColor();
 		g.setColor(Color.GRAY);
-		g.setFont(font);//ÉèÖÃ×ÖÌå
-		g.drawString("·ÖÊı£º"+score, 650, 50);
-		g.drawString("Ëğº¦³Ì¶È£º"+damage, 600, 150);
-		g.drawString("ÉúÃü£º"+myPlane.getLiveNum(), 650, 100);
+		g.setFont(font);//è®¾ç½®å­—ä½“
+		g.drawString("åˆ†æ•°ï¼š"+score, 650, 50);
+		g.drawString("æŸå®³ç¨‹åº¦ï¼š"+damage, 600, 150);
+		g.drawString("ç”Ÿå‘½ï¼š"+myPlane.getLiveNum(), 650, 100);
 		g.setColor(c);
 		for(int i=0;i<bts.size();i++){
 			Bullet bt=bts.get(i);
@@ -107,9 +105,9 @@ public class Client extends Panel {
 		myPlane.draw(g);
 		if(gameOver){
 			g.setColor(Color.RED);
-			Font font=new Font("ËÎÌå",Font.PLAIN,100);
+			Font font=new Font("å®‹ä½“",Font.PLAIN,100);
 			g.setFont(font);
-			g.drawString("ÓÎÏ·½áÊø£¡", 200, 350);
+			g.drawString("æ¸¸æˆç»“æŸï¼", 200, 350);
 		}
 	}
 	
