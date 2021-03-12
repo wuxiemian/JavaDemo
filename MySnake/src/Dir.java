@@ -1,4 +1,4 @@
 
 public enum Dir {
-	U,L,D,R
+    U, L, D, R
 }
